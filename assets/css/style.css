@@ -1,0 +1,132 @@
+/* Font Family */
+
+@font-face {
+    font-family: 'Figtree';
+    src: url('../fonts/Figtree-VariableFont_wght.ttf'), type('truetype');
+}
+
+/* Var */
+
+:root {
+    --yellow: hsl(47, 88%, 63%);
+    --white: hsl(0, 0%, 100%);
+    --gray-500: hsl(0, 0%, 42%);
+    --gray-950: hsl(0, 0%, 7%);
+    --font-family-base: 'Figtree';
+}
+
+/* Reset Default */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template: 1fr / 1fr;
+    background-color: var(--yellow);
+    font-family: var(--font-family-base);
+    height: 95vh;
+}
+
+p,
+h1 {
+    margin: 1rem 0;
+}
+
+
+/* Container */
+
+.container {
+    width: 420px;
+    height: 63%;
+    background-color: var(--white);
+    border: 1px solid var(--gray-950);
+    border-radius: 5%;
+    box-shadow: 10px 10px;
+}
+
+/* Box */
+
+.box {
+    padding: 1.2rem;
+}
+
+.box .bg {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.box .tag-container {
+    margin: 1.7rem 0;
+}
+
+.box .tag-container .tag {
+    background-color: var(--yellow);
+    padding: .5rem .8rem;
+    border-radius: .3rem;
+}
+
+.box .published-date {
+    color: var(--gray-950);
+    font-weight: 500;
+}
+
+.box h1 {
+    width: 100%;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.description {
+    color: var(--gray-500);
+    line-height: 1.5;
+    word-spacing: 2px;
+}
+
+.creator {
+    display: flex;
+    width: 100%;
+}
+
+.avatar {
+    align-self: center;
+    width: 10%;
+    height: 5%;
+    margin: 0 .5rem 0 0;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.attribution {
+    font-size: 11px; 
+    text-align: center;
+    margin-top: 3.5rem;
+    color: var(--gray-950);
+    font-weight: bold;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* MOBILE */
+
+@media only screen and (max-width: 480px) {
+    .container {
+        width: 86%;
+        height: 75%;
+    }
+    .description {
+        font-size: 15px;
+        margin: 0 0 .6rem 0;
+    }
+    .box h1 {
+        font-size: 20px;
+    }
+}
